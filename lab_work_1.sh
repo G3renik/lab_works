@@ -1,31 +1,31 @@
 # !/bin/bash
 
-# 						1 задание
+# 						1 Р·Р°РґР°РЅРёРµ
 
 cd lab0
 mkdir bagon
 cd bagon
 mkdir glameow
 touch wooper
-echo -e "Способности = Torrent Landslide Damp\nWater Absorb" > wooper
+echo -e "РЎРїРѕСЃРѕР±РЅРѕСЃС‚Рё = Torrent Landslide Damp\nWater Absorb" > wooper
 mkdir poochyena
-# Не использую touch, так как echo сразу создает файл"
-echo "Тип покемона = FIRE FIGHTING" > emboar
+# РќРµ РёСЃРїРѕР»СЊР·СѓСЋ touch, С‚Р°Рє РєР°Рє echo СЃСЂР°Р·Сѓ СЃРѕР·РґР°РµС‚ С„Р°Р№Р»"
+echo "РўРёРї РїРѕРєРµРјРѕРЅР° = FIRE FIGHTING" > emboar
 mkdir meowth
-echo -e "Способности = Last Chance Mach Speed\nIntimidate Keen Eye" > staravia
+echo -e "РЎРїРѕСЃРѕР±РЅРѕСЃС‚Рё = Last Chance Mach Speed\nIntimidate Keen Eye" > staravia
 cd ..
-echo "Развитые способности = Rattled" > granbull
-echo -e "Способности = Bite Roar Ember Leer Odor\nSleuth Helping Hand Flame Wheel Reversal\nFire Fang Take Down Flame Burst Agility\nRetaliate Flamethrower Crunch Heat Wave\nOutrage Flare Blitz" > growlithe
-echo "Тип покемона = WATER ELECTRIC" > lanturn
-echo "Тип диеты = Carnivore" > seel
+echo "Р Р°Р·РІРёС‚С‹Рµ СЃРїРѕСЃРѕР±РЅРѕСЃС‚Рё = Rattled" > granbull
+echo -e "РЎРїРѕСЃРѕР±РЅРѕСЃС‚Рё = Bite Roar Ember Leer Odor\nSleuth Helping Hand Flame Wheel Reversal\nFire Fang Take Down Flame Burst Agility\nRetaliate Flamethrower Crunch Heat Wave\nOutrage Flare Blitz" > growlithe
+echo "РўРёРї РїРѕРєРµРјРѕРЅР° = WATER ELECTRIC" > lanturn
+echo "РўРёРї РґРёРµС‚С‹ = Carnivore" > seel
 mkdir whirlpede
 cd whirlpede
 mkdir dusknoir
-echo -e "Способности = Harden Mud-Slap Disable\nSludge Minimize Mud Bomb Sludge Bomb\nFling Screech Sludge Wave Acid Armor\nGunk Shot Memento" > muk
+echo -e "РЎРїРѕСЃРѕР±РЅРѕСЃС‚Рё = Harden Mud-Slap Disable\nSludge Minimize Mud Bomb Sludge Bomb\nFling Screech Sludge Wave Acid Armor\nGunk Shot Memento" > muk
 mkdir vibrava
-echo -e "Ходы = Air Cutter Counter Defog\nDouble-edge Endeavor Heat Wave Mud-Slap\nOminous Wind Roost Sky Attack Sleep Talk\nSnore Swift Tailwind Twister" > taillow
+echo -e "РҐРѕРґС‹ = Air Cutter Counter Defog\nDouble-edge Endeavor Heat Wave Mud-Slap\nOminous Wind Roost Sky Attack Sleep Talk\nSnore Swift Tailwind Twister" > taillow
 
-# 						2 задание
+# 						2 Р·Р°РґР°РЅРёРµ
 
 cd ..
 #	bagon
@@ -76,43 +76,43 @@ chmod 315 whirlpede/vibrava
 #	taillow
 chmod u=,g=r,o=rw whirlpede/taillow
 
-#						 3 задание
+#						 3 Р·Р°РґР°РЅРёРµ
 
-# Перехожу в свою корневую папку
+# РџРµСЂРµС…РѕР¶Сѓ РІ СЃРІРѕСЋ РєРѕСЂРЅРµРІСѓСЋ РїР°РїРєСѓ
 cd ..
-#	Выдаю себе права читать muk и staravia и bagon
+#	Р’С‹РґР°СЋ СЃРµР±Рµ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ muk Рё staravia Рё bagon
    chmod u+r lab0/whirlpede/muk
    chmod u+r lab0/bagon/staravia
    chmod u+r lab0/bagon
 
 cat lab0/whirlpede/muk lab0/bagon/staravia > lab0/growlithe_15
 
-#	Возвращаю нужные права
+#	Р’РѕР·РІСЂР°С‰Р°СЋ РЅСѓР¶РЅС‹Рµ РїСЂР°РІР°
    chmod u-r lab0/whirlpede/muk
    chmod u-r lab0/bagon/staravia
    chmod u-r lab0/bagon
 
-#	Выдаю себе права читать bagon и staravia
+#	Р’С‹РґР°СЋ СЃРµР±Рµ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ bagon Рё staravia
    chmod u+r lab0/bagon
    chmod u+r lab0/bagon/staravia
 
 cp -r lab0/bagon lab0/whirlpede/vibrava
 
-#	Забираю права читать bagon и staravia
+#	Р—Р°Р±РёСЂР°СЋ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ bagon Рё staravia
    chmod u-r lab0/bagon
    chmod u-r lab0/bagon/staravia
 
 ln -s whirlpede lab0/Copy_4
 ln -s ../granbull lab0/bagon/staraviagranbull
 
-#	Выдаю себе права читать granbull и bagon и писать в poochyena
+#	Р’С‹РґР°СЋ СЃРµР±Рµ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ granbull Рё bagon Рё РїРёСЃР°С‚СЊ РІ poochyena
    chmod u+r lab0/granbull
    chmod u+r lab0/bagon
    chmod u+w lab0/bagon/poochyena
 
 cp lab0/granbull lab0/bagon/poochyena/
 
-#	Забираю себе права читать granbull, bagon и писать в poochyena
+#	Р—Р°Р±РёСЂР°СЋ СЃРµР±Рµ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ granbull, bagon Рё РїРёСЃР°С‚СЊ РІ poochyena
    chmod u-r lab0/granbull
    chmod u-w lab0/bagon/poochyena
 
@@ -120,24 +120,24 @@ cp lab0/granbull lab0/bagon/poochyena/
 cat lab0/lanturn > lab0/bagon/staravialanturn
 ln lab0/seel lab0/bagon/emboarseel
 
-#	Забираю права читать bagon
+#	Р—Р°Р±РёСЂР°СЋ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ bagon
    chmod u-r lab0/bagon
 
-# 						4 задание
+# 						4 Р·Р°РґР°РЅРёРµ
 
 mkdir tmp
-# 1 пункт
+# 1 РїСѓРЅРєС‚
 
-# Даю себе права читать emboar и staravia
+# Р”Р°СЋ СЃРµР±Рµ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ emboar Рё staravia
    chmod u+r lab0/bagon/emboar
    chmod u+r lab0/bagon/staravia
 
 wc -m lab0/bagon/emboar lab0/bagon/staravia > tmp/4a 2>&1
 
 
-# 2 пункт
+# 2 РїСѓРЅРєС‚
 
-# Даю себе права читать bagon и wnirlpede и другие каталоги так как поиск рекурсивно
+# Р”Р°СЋ СЃРµР±Рµ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ bagon Рё wnirlpede Рё РґСЂСѓРіРёРµ РєР°С‚Р°Р»РѕРіРё С‚Р°Рє РєР°Рє РїРѕРёСЃРє СЂРµРєСѓСЂСЃРёРІРЅРѕ
    chmod u+r lab0/bagon
    chmod u+r lab0/whirlpede
    chmod u+r lab0/whirlpede/vibrava
@@ -146,45 +146,45 @@ wc -m lab0/bagon/emboar lab0/bagon/staravia > tmp/4a 2>&1
 ls -R -lut lab0 2> tmp/4b | tail -n 2
 
 
-# 3 пункт
+# 3 РїСѓРЅРєС‚
 
 
 grep -r --include="w*" "" lab0 2>&1 | sort
 
 
-# 4 пункт 
+# 4 РїСѓРЅРєС‚ 
 
-# Даю себе права читать staravia
+# Р”Р°СЋ СЃРµР±Рµ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ staravia
    chmod u+r lab0/bagon/staravia
 
 grep -E -e "b$" lab0/bagon/wooper lab0/bagon/emboar lab0/bagon/staravia 2>/dev/null
 
-# Забираю права читать staravia
+# Р—Р°Р±РёСЂР°СЋ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ staravia
    chmod u-r lab0/bagon/staravia
 
-# 5 пункт
+# 5 РїСѓРЅРєС‚
 
 grep -r --include="*l" "" lab0 | wc -l
 
-# 6 пункт
+# 6 РїСѓРЅРєС‚
 
 
 ls -laR lab0/bagon | grep '^-'| sort -k 2 -n -r 
 
-# Забираю себе права читать bagon и wnirlpede
+# Р—Р°Р±РёСЂР°СЋ СЃРµР±Рµ РїСЂР°РІР° С‡РёС‚Р°С‚СЊ bagon Рё wnirlpede
    chmod u-r lab0/bagon
    chmod u-r lab0/whirlpede
    chmod u-r lab0/whirlpede/vibrava
    chmod u-r lab0/granbull
 
-# 						5 задание
+# 						5 Р·Р°РґР°РЅРёРµ
 
 rm -f lab0/lanturn
 rm -f lab0/bagon/emboar
 rm -f lab0/bagon/staraviagranbull
 rm -f lab0/bagon/emboarseel
 
-# Даю права для vibrava и whirlpede и всех файлов внутри
+# Р”Р°СЋ РїСЂР°РІР° РґР»СЏ vibrava Рё whirlpede Рё РІСЃРµС… С„Р°Р№Р»РѕРІ РІРЅСѓС‚СЂРё
    chmod -R u+rwx lab0/whirlpede
 
 rm -rf lab0/whirlpede/vibrava
